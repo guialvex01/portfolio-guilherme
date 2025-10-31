@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guilherme Alves — Portfólio</title>
-  <link rel="preload" href="assets/img/perfil.jpg" as="image">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
 <body>
   <header class="topbar">
@@ -35,7 +36,7 @@
       </div>
     </section>
 
-    <!-- Perfil / Sobre -->
+    <!-- Perfil -->
     <section id="sobre" class="card container">
       <h2>Perfil Pessoal</h2>
       <p>
@@ -45,49 +46,50 @@
 
     <!-- Contatos -->
     <section id="contato" class="card container">
-      <h2>Contatos</h2>
-      <ul class="list contacts">
-        <li>📧 <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">guilherme.alves.stw@gmail.com</a></li>
-        <li>📱 <a href="https://wa.me/5524992078895" target="_blank" rel="noopener">(24) 99207-8895</a></li>
-        <li>🐙 <a href="https://github.com/guialvex01" target="_blank" rel="noopener">github.com/guialvex01</a></li>
-        <li>💼 <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul>
+        <h2>Contatos</h2>
+        <ul class="list contacts">
+        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">guilherme.alves.stw@gmail.com</a></li>
+        <li><i class="fa-solid fa-phone"></i> <a href="https://wa.me/5524992078895" target="_blank" rel="noopener">(24) 99207-8895</a></li>
+        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/guialvex01" target="_blank" rel="noopener">github.com/guialvex01</a></li>
+        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><i class="fa-solid fa-location-dot"></i> Volta Redonda — RJ</li>
+       </ul>
     </section>
+
 
     <!-- Experiência -->
     <section id="experiencia" class="card container">
       <h2>Experiência</h2>
-      <div class="job">
-        <h3>Balconista — Centerseg</h3>
-        <div class="pill">2022 — Atual</div>
+      <div class="info-block">
+        <strong>Balconista — Centerseg</strong>
+        <p>2022 — Atual</p>
+        <p>Atendimento ao público e suporte operacional.</p>
       </div>
     </section>
 
     <!-- Formação -->
     <section id="formacao" class="card container">
       <h2>Formação Acadêmica</h2>
-      <div class="edu">
-        <h3>Sistemas de Informação — UGB</h3>
-        <div class="pill">2024 — Em andamento</div>
+      <div class="info-block">
+        <strong>Sistemas de Informação</strong>
+        <p>Fev 2024 — Em andamento</p>
+        <p>Centro Universitário Geraldo Di Biase (UGB)</p>
       </div>
     </section>
 
-    <!-- Cursos (nome como link, abrindo em nova aba) -->
+    <!-- Cursos -->
     <section id="cursos" class="card container">
       <h2>Cursos</h2>
-      <ul class="list">
-        <li>
-          🎓
-        <a class="course-link" 
-            href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true" 
-            target="_blank" rel="noopener">
-           HTML: Introdução ao desenvolvimento de páginas web — IFRS
-        </a>
-
-
-          <span class="muted">• 20h • set/2023</span>
-        </li>
-      </ul>
+      <div class="info-block">
+        <strong>
+          <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true" 
+          target="_blank" rel="noopener">
+          HTML: Introdução ao desenvolvimento de páginas web — IFRS
+          </a>
+        </strong>
+        <p>Set 2023</p>
+        <p>Duração: 20h</p>
+      </div>
     </section>
   </main>
 
@@ -95,15 +97,14 @@
     <div class="container footer-content">
       <div>© <span id="year"></span> Guilherme Alves</div>
       <div class="social">
-        <a href="https://github.com/guialvex01" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-        <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-        <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener" aria-label="Email">Email</a>
+        <a href="https://github.com/guialvex01" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">Email</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // ano automático
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
