@@ -138,15 +138,3 @@ a:hover { text-decoration: underline; }
   .avatar { width: 120px; height: 120px; border-radius: 12px; }
   .menu { display: none; }
 }
-/* Inverter a ordem dos cursos automaticamente */
-#cursos .card-content,
-#cursos .info-container {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-#cursos .info-blocks {
-  display: flex;
-  flex-direction: column-reverse;
-}
-

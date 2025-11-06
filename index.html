@@ -6,7 +6,6 @@
   <title>Guilherme Alves — Portfólio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 <body>
   <header class="topbar">
@@ -56,7 +55,6 @@
        </ul>
     </section>
 
-
     <!-- Experiência -->
     <section id="experiencia" class="card container">
       <h2>Experiência</h2>
@@ -77,34 +75,45 @@
       </div>
     </section>
 
-<!-- Cursos -->
-<section id="cursos" class="card container">
-  <h2>Cursos</h2>
+    <!-- Cursos -->
+    <section id="cursos" class="card container">
+      <h2>Cursos</h2>
 
-  <div class="info-container">
-    <div class="info-block">
-      <strong>
-        <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true" 
-        target="_blank" rel="noopener">
-          HTML: Introdução ao desenvolvimento de páginas web — IFRS
-        </a>
-      </strong>
-      <p>Set 2023</p>
-    </div>
-
-    <div class="info-block">
-      <strong>
-        <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Python_Intermediario.pdf&embedded=true" 
-        target="_blank" rel="noopener">
-          Python Intermediário — SoloLearn
-        </a>
-      </strong>
-      <p>Nov 2025</p>
-    </div>
-  </div>
-</section>
+      <div class="info-block" data-date="2025-03">
+  <strong>
+    <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/SQL_Intermediario.pdf&embedded=true" 
+    target="_blank" rel="noopener">
+      SQL Intermediário — SoloLearn
+    </a>
+  </strong>
+  <p>Nov 2025</p>
+</div>
 
 
+      <div class="info-container">
+        <div class="info-block" data-date="2025-11">
+          <strong>
+            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Python_Intermediario.pdf&embedded=true" 
+            target="_blank" rel="noopener">
+              Python Intermediário — SoloLearn
+            </a>
+          </strong>
+          <p>Nov 2025</p>
+        </div>
+
+        <div class="info-block" data-date="2023-09">
+          <strong>
+            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true" 
+            target="_blank" rel="noopener">
+              HTML: Introdução ao desenvolvimento de páginas web — IFRS
+            </a>
+          </strong>
+          <p>Set 2023</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container footer-content">
@@ -118,7 +127,22 @@
   </footer>
 
   <script>
+    // Atualiza o ano automaticamente no rodapé
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Ordena cursos por data (mais recente → mais antigo)
+    document.addEventListener("DOMContentLoaded", () => {
+      const container = document.querySelector("#cursos .info-container");
+      const cursos = Array.from(container.children);
+
+      cursos.sort((a, b) => {
+        const dateA = a.getAttribute("data-date");
+        const dateB = b.getAttribute("data-date");
+        return dateB.localeCompare(dateA); // mais recente primeiro
+      });
+
+      cursos.forEach(curso => container.appendChild(curso));
+    });
   </script>
 </body>
 </html>
