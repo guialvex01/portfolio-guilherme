@@ -169,3 +169,37 @@ a:hover { text-decoration: underline; }
 .btn-cv i {
   font-size: 0.9rem;
 }
+/* Rodapé com ícones sociais */
+.footer {
+  background-color: var(--accent);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  margin-top: 30px;
+}
+
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 10px;
+}
+
+.social-footer a {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-footer a:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  color: white;
+  margin: 0;
+}
