@@ -138,3 +138,33 @@ a:hover { text-decoration: underline; }
   .avatar { width: 120px; height: 120px; border-radius: 12px; }
   .menu { display: none; }
 }
+
+/* Botão de baixar currículo (preto elegante) */
+.resume-button {
+  margin-top: 18px;
+}
+
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #111; /* preto elegante */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.btn-cv:hover {
+  background-color: #222;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+.btn-cv i {
+  font-size: 1rem;
+  color: white;
+}
