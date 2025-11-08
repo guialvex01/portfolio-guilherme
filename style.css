@@ -251,3 +251,144 @@ a:hover { text-decoration: underline; }
     font-size: 0.9rem;
   }
 }
+/* ==== EFEITOS DE HOVER E SOMBRAS SUTIS ==== */
+
+/* Efeito suave nos cards (Perfil, Experiência, Formação, etc.) */
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(45, 156, 255, 0.15);
+}
+
+/* Hover em links e títulos */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+a:hover {
+  color: #1b6fcf;
+  text-decoration: underline;
+}
+
+/* Hover na foto de perfil */
+.avatar {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+.avatar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão de currículo - realce no hover */
+.btn-cv {
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-cv:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(45, 156, 255, 0.3);
+}
+
+/* Ícones do rodapé - movimento sutil no hover */
+.social-footer a {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.social-footer a:hover {
+  transform: translateY(-4px) scale(1.05);
+  opacity: 0.85;
+}
+
+/* Cards interativos com leve foco */
+.card:focus-within,
+.card:hover {
+  border-color: rgba(45, 156, 255, 0.4);
+}
+
+/* Ajuste para hover suave em seções (transição uniforme) */
+section {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 720px) {
+  .card:hover,
+  .avatar:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+/* =============================== */
+/* 🔹 NOVA FONTE (POPPINS) E LOGO  */
+/* =============================== */
+
+/* Aplica a nova fonte em todo o site */
+body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Inter, Arial, sans-serif;
+}
+
+/* ====== LOGO NO TOPO (SEM TEXTO) ====== */
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand .logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.brand .logo:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Ajuste de alinhamento para o header continuar equilibrado */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+@media (max-width: 720px) {
+  .brand .logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* Logo com leve animação no hover */
+.brand .logo {
+  width: 60px;              /* mantém o tamanho “real” da barra */
+  height: 60px;
+  transform: scale(1.6);    /* aumenta visualmente a logo */
+  transform-origin: center; /* centraliza o aumento */
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.brand .logo:hover {
+  transform: scale(1.08);
+}
+
+/* Responsivo: reduz logo no celular */
+@media (max-width: 720px) {
+  .brand .logo {
+    width: 32px;
+    height: 32px;
+  }
+}
