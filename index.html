@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guilherme Alves — Portfólio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png?v=2">
   <link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
   <link rel="apple-touch-icon" href="favicon.png?v=2">
@@ -13,30 +13,42 @@
   <meta name="msapplication-TileImage" content="favicon.png?v=2">
   <meta name="msapplication-TileColor" content="#2D9CFF">
 
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
+  <!-- Biblioteca de animações suaves (AOS) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
       <div class="brand">Guilherme Alves</div>
+
+      <!-- Botão de idiomas -->
+      <div class="lang-switch">
+        <button id="pt" class="lang-btn active">PT</button>
+        <button id="en" class="lang-btn">EN</button>
+      </div>
+
       <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Perfil</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#formacao">Formação</a>
-        <a href="#cursos">Cursos</a>
-        <a href="#contato">Contato</a>
+        <a href="#inicio" data-key="Início">Início</a>
+        <a href="#sobre" data-key="Perfil Pessoal">Perfil</a>
+        <a href="#experiencia" data-key="Experiência">Experiência</a>
+        <a href="#formacao" data-key="Formação Acadêmica">Formação</a>
+        <a href="#cursos" data-key="Cursos">Cursos</a>
+        <a href="#contato" data-key="Contatos">Contato</a>
       </nav>
     </div>
   </header>
 
   <main>
     <!-- Início -->
-    <section id="inicio" class="hero container">
+    <section id="inicio" class="hero container" data-aos="fade-up">
       <img class="avatar" src="assets/img/perfil.jpg" alt="Foto de Guilherme Alves">
       <div class="intro">
         <h1>Guilherme Alves</h1>
-        <p class="tagline">
+        <p class="tagline" data-key="tagline">
           Estudante de Sistemas de Informação com foco em desenvolvimento web,
           buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.
         </p>
@@ -44,52 +56,48 @@
     </section>
 
     <!-- Perfil -->
-    <section id="sobre" class="card container">
-      <h2>Perfil Pessoal</h2>
-      <p>
+    <section id="sobre" class="card container" data-aos="fade-up">
+      <h2 data-key="Perfil Pessoal">Perfil Pessoal</h2>
+      <p data-key="perfil-texto">
         Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.
       </p>
     </section>
 
-<!-- Contatos -->
-<section id="contato" class="card container">
-  <h2>Contatos</h2>
-  <ul class="list contacts">
-    <li><i class="fa-solid fa-envelope"></i> 
-      <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
-        guilherme.alves.stw@gmail.com
+    <!-- Contatos -->
+    <section id="contato" class="card container" data-aos="fade-up">
+      <h2 data-key="Contatos">Contatos</h2>
+      <ul class="list contacts">
+        <li><i class="fa-solid fa-envelope"></i>
+          <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
+            guilherme.alves.stw@gmail.com
+          </a>
+        </li>
+        <li><i class="fa-solid fa-phone"></i>
+          <a href="https://wa.me/5524992078895" target="_blank" rel="noopener">
+            (24) 99207-8895
+          </a>
+        </li>
+      </ul>
+
+      <a href="https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Curriculo_Guilherme_Alves.pdf"
+         target="_blank" rel="noopener" class="btn-cv">
+        <i class="fa-solid fa-file-arrow-down"></i> Ver Currículo
       </a>
-    </li>
-    <li><i class="fa-solid fa-phone"></i> 
-      <a href="https://wa.me/5524992078895" target="_blank" rel="noopener">
-        (24) 99207-8895
-      </a>
-    </li>
-  </ul>
-
-<a href="https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Curriculo_Guilherme_Alves.pdf"
-   target="_blank" rel="noopener" class="btn-cv">
-  <i class="fa-solid fa-file-arrow-down"></i> Ver Currículo
-</a>
-  </div>
-</section>
-
-
-
+    </section>
 
     <!-- Experiência -->
-    <section id="experiencia" class="card container">
-      <h2>Experiência</h2>
+    <section id="experiencia" class="card container" data-aos="fade-up">
+      <h2 data-key="Experiência">Experiência</h2>
       <div class="info-block">
         <strong>Balconista — Centerseg</strong>
         <p>2022 — Atual</p>
-        <p>Atendimento ao público e suporte operacional.</p>
+        <p data-key="experiencia-texto">Atendimento ao público e suporte operacional.</p>
       </div>
     </section>
 
     <!-- Formação -->
-    <section id="formacao" class="card container">
-      <h2>Formação Acadêmica</h2>
+    <section id="formacao" class="card container" data-aos="fade-up">
+      <h2 data-key="Formação Acadêmica">Formação Acadêmica</h2>
       <div class="info-block">
         <strong>Sistemas de Informação</strong>
         <p>Fev 2024 — Em andamento</p>
@@ -98,24 +106,23 @@
     </section>
 
     <!-- Cursos -->
-    <section id="cursos" class="card container">
-      <h2>Cursos</h2>
+    <section id="cursos" class="card container" data-aos="fade-up">
+      <h2 data-key="Cursos">Cursos</h2>
 
       <div class="info-block" data-date="2025-03">
-  <strong>
-    <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/SQL_Intermediario.pdf&embedded=true" 
-    target="_blank" rel="noopener">
-      SQL Intermediário — SoloLearn
-    </a>
-  </strong>
-  <p>Nov 2025</p>
-</div>
-
+        <strong>
+          <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/SQL_Intermediario.pdf&embedded=true"
+          target="_blank" rel="noopener">
+            SQL Intermediário — SoloLearn
+          </a>
+        </strong>
+        <p>Nov 2025</p>
+      </div>
 
       <div class="info-container">
         <div class="info-block" data-date="2025-11">
           <strong>
-            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Python_Intermediario.pdf&embedded=true" 
+            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Python_Intermediario.pdf&embedded=true"
             target="_blank" rel="noopener">
               Python Intermediário — SoloLearn
             </a>
@@ -125,7 +132,7 @@
 
         <div class="info-block" data-date="2023-09">
           <strong>
-            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true" 
+            <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true"
             target="_blank" rel="noopener">
               HTML: Introdução ao desenvolvimento de páginas web — IFRS
             </a>
@@ -134,42 +141,83 @@
         </div>
       </div>
     </section>
-
   </main>
 
-<footer class="footer">
-  <div class="social-footer">
-    <a href="https://github.com/guialvex01" target="_blank" rel="noopener">
-      <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
-      <i class="fa-solid fa-envelope"></i>
-    </a>
-  </div>
-  <p>© <span id="year"></span> Guilherme Alves</p>
-</footer>
+  <!-- Rodapé -->
+  <footer class="footer" data-aos="fade-up">
+    <div class="social-footer">
+      <a href="https://github.com/guialvex01" target="_blank" rel="noopener">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </div>
+    <p>© <span id="year"></span> Guilherme Alves</p>
+  </footer>
 
-
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Atualiza o ano automaticamente no rodapé
+    AOS.init({ duration: 800, once: true });
+
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Ordena cursos por data (mais recente → mais antigo)
+    // Ordena cursos por data
     document.addEventListener("DOMContentLoaded", () => {
       const container = document.querySelector("#cursos .info-container");
       const cursos = Array.from(container.children);
-
-      cursos.sort((a, b) => {
-        const dateA = a.getAttribute("data-date");
-        const dateB = b.getAttribute("data-date");
-        return dateB.localeCompare(dateA); // mais recente primeiro
-      });
-
+      cursos.sort((a, b) => b.getAttribute("data-date").localeCompare(a.getAttribute("data-date")));
       cursos.forEach(curso => container.appendChild(curso));
     });
+
+    // Sistema de idiomas
+    const translations = {
+      pt: {
+        "Perfil Pessoal": "Perfil Pessoal",
+        "Contatos": "Contatos",
+        "Experiência": "Experiência",
+        "Formação Acadêmica": "Formação Acadêmica",
+        "Cursos": "Cursos",
+        "Início": "Início",
+        tagline: "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+        "perfil-texto": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+        "experiencia-texto": "Atendimento ao público e suporte operacional."
+      },
+      en: {
+        "Perfil Pessoal": "Personal Profile",
+        "Contatos": "Contacts",
+        "Experiência": "Experience",
+        "Formação Acadêmica": "Academic Background",
+        "Cursos": "Courses",
+        "Início": "Home",
+        tagline: "Information Systems student focused on web development, aiming to create modern and functional digital experiences while evolving in the technology world.",
+        "perfil-texto": "Information Systems student focused on web development, aiming to create modern and functional digital experiences while evolving in the technology world.",
+        "experiencia-texto": "Customer service and operational support."
+      }
+    };
+
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.id;
+        changeLanguage(lang);
+      });
+    });
+
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
   </script>
 </body>
 </html>

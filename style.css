@@ -203,3 +203,51 @@ a:hover { text-decoration: underline; }
   color: white;
   margin: 0;
 }
+/* Botões de idioma (PT/EN) */
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 3px 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.lang-btn.active,
+.lang-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+/* Alinhamento da barra de idiomas no header */
+.topbar .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar .lang-switch {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+/* Responsivo: esconder menu e ajustar idioma no mobile */
+@media (max-width: 720px) {
+  .lang-switch {
+    margin-left: 0;
+  }
+
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+  }
+}
