@@ -7,47 +7,43 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png?v=2">
-  <link rel="shortcut icon" type="image/png" href="favicon.png?v=2">
-  <link rel="apple-touch-icon" href="favicon.png?v=2">
   <meta name="theme-color" content="#2D9CFF">
-  <meta name="msapplication-TileImage" content="favicon.png?v=2">
-  <meta name="msapplication-TileColor" content="#2D9CFF">
 
-  <!-- Fonte personalizada (Poppins) -->
+  <!-- Fonte personalizada -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Biblioteca de animações suaves (AOS) -->
+  <!-- Biblioteca AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <header class="topbar">
     <div class="container nav">
-      
-      <!-- Logotipo + Nome -->
-<div class="brand">
-  <a href="#inicio">
-    <img src="logo.png" alt="Logo Guilherme Alves" class="logo">
-  </a>
-</div>
 
+      <!-- Logo -->
+      <div class="brand">
+        <a href="#inicio">
+          <img src="logo.png" alt="Logo Guilherme Alves" class="logo">
+        </a>
+      </div>
 
-      <!-- Botão de idiomas -->
+      <!-- Idiomas -->
       <div class="lang-switch">
         <button id="pt" class="lang-btn active">PT</button>
         <button id="en" class="lang-btn">EN</button>
       </div>
 
+      <!-- Menu -->
       <nav class="menu">
         <a href="#inicio" data-key="Início">Início</a>
-        <a href="#sobre" data-key="Perfil Pessoal">Perfil</a>
+        <a href="#sobre" data-key="Perfil">Perfil</a>
         <a href="#experiencia" data-key="Experiência">Experiência</a>
-        <a href="#formacao" data-key="Formação Acadêmica">Formação</a>
+        <a href="#formacao" data-key="Formação">Formação</a>
         <a href="#cursos" data-key="Cursos">Cursos</a>
-        <a href="#contato" data-key="Contatos">Contato</a>
+        <a href="#contato" data-key="Contato">Contato</a>
       </nav>
     </div>
   </header>
@@ -57,7 +53,7 @@
     <section id="inicio" class="hero container" data-aos="fade-up">
       <img class="avatar" src="perfil.jpg" alt="Foto de Guilherme Alves">
       <div class="intro">
-        <h1>Guilherme Alves</h1>
+        <h1 data-key="Nome">Guilherme Alves</h1>
         <p class="tagline" data-key="tagline">
           Estudante de Sistemas de Informação com foco em desenvolvimento web,
           buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.
@@ -67,7 +63,7 @@
 
     <!-- Perfil -->
     <section id="sobre" class="card container" data-aos="fade-up">
-      <h2 data-key="Perfil Pessoal">Perfil Pessoal</h2>
+      <h2 data-key="Perfil">Perfil Pessoal</h2>
       <p data-key="perfil-texto">
         Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.
       </p>
@@ -75,22 +71,22 @@
 
     <!-- Contatos -->
     <section id="contato" class="card container" data-aos="fade-up">
-      <h2 data-key="Contatos">Contatos</h2>
+      <h2 data-key="Contato">Contatos</h2>
       <ul class="list contacts">
         <li><i class="fa-solid fa-envelope"></i>
-          <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
+          <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener" data-key="email">
             guilherme.alves.stw@gmail.com
           </a>
         </li>
         <li><i class="fa-solid fa-phone"></i>
-          <a href="https://wa.me/5524992078895" target="_blank" rel="noopener">
+          <a href="https://wa.me/5524992078895" target="_blank" rel="noopener" data-key="telefone">
             (24) 99207-8895
           </a>
         </li>
       </ul>
 
       <a href="https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Curriculo_Guilherme_Alves.pdf"
-         target="_blank" rel="noopener" class="btn-cv">
+         target="_blank" rel="noopener" class="btn-cv" data-key="curriculo">
         <i class="fa-solid fa-file-arrow-down"></i> Ver Currículo
       </a>
     </section>
@@ -99,19 +95,19 @@
     <section id="experiencia" class="card container" data-aos="fade-up">
       <h2 data-key="Experiência">Experiência</h2>
       <div class="info-block">
-        <strong>Balconista — Centerseg</strong>
-        <p>2022 — Atual</p>
+        <strong data-key="cargo">Balconista — Centerseg</strong>
+        <p data-key="periodo">2022 — Atual</p>
         <p data-key="experiencia-texto">Atendimento ao público e suporte operacional.</p>
       </div>
     </section>
 
     <!-- Formação -->
     <section id="formacao" class="card container" data-aos="fade-up">
-      <h2 data-key="Formação Acadêmica">Formação Acadêmica</h2>
+      <h2 data-key="Formação">Formação Acadêmica</h2>
       <div class="info-block">
-        <strong>Sistemas de Informação</strong>
-        <p>Fev 2024 — Em andamento</p>
-        <p>Centro Universitário Geraldo Di Biase (UGB)</p>
+        <strong data-key="curso">Sistemas de Informação</strong>
+        <p data-key="formacao-periodo">Fev 2024 — Em andamento</p>
+        <p data-key="instituicao">Centro Universitário Geraldo Di Biase (UGB)</p>
       </div>
     </section>
 
@@ -120,34 +116,34 @@
       <h2 data-key="Cursos">Cursos</h2>
 
       <div class="info-block" data-date="2025-03">
-        <strong>
+        <strong data-key="curso-sql">
           <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/SQL_Intermediario.pdf&embedded=true"
           target="_blank" rel="noopener">
             SQL Intermediário — SoloLearn
           </a>
         </strong>
-        <p>Nov 2025</p>
+        <p data-key="data-sql">Nov 2025</p>
       </div>
 
       <div class="info-container">
         <div class="info-block" data-date="2025-11">
-          <strong>
+          <strong data-key="curso-python">
             <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/portfolio-guilherme/main/Python_Intermediario.pdf&embedded=true"
             target="_blank" rel="noopener">
               Python Intermediário — SoloLearn
             </a>
           </strong>
-          <p>Nov 2025</p>
+          <p data-key="data-python">Nov 2025</p>
         </div>
 
         <div class="info-block" data-date="2023-09">
-          <strong>
+          <strong data-key="curso-html">
             <a href="https://docs.google.com/gview?url=https://raw.githubusercontent.com/guialvex01/certificados-guilherme/main/HTML_Introdução_ao_desenvolvimento_de_páginas_web-Certificado_digital_1956183.pdf&embedded=true"
             target="_blank" rel="noopener">
               HTML: Introdução ao desenvolvimento de páginas web — IFRS
             </a>
           </strong>
-          <p>Set 2023</p>
+          <p data-key="data-html">Set 2023</p>
         </div>
       </div>
     </section>
@@ -156,15 +152,9 @@
   <!-- Rodapé -->
   <footer class="footer" data-aos="fade-up">
     <div class="social-footer">
-      <a href="https://github.com/guialvex01" target="_blank" rel="noopener">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
+      <a href="https://github.com/guialvex01" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/guilherme-alves-99383a28b" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:guilherme.alves.stw@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i></a>
     </div>
     <p>© <span id="year"></span> Guilherme Alves</p>
   </footer>
@@ -173,61 +163,78 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
-
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Ordena cursos por data
-    document.addEventListener("DOMContentLoaded", () => {
-      const container = document.querySelector("#cursos .info-container");
-      const cursos = Array.from(container.children);
-      cursos.sort((a, b) => b.getAttribute("data-date").localeCompare(a.getAttribute("data-date")));
-      cursos.forEach(curso => container.appendChild(curso));
-    });
-
-    // Sistema de idiomas
+    // Traduções
     const translations = {
       pt: {
-        "Perfil Pessoal": "Perfil Pessoal",
-        "Contatos": "Contatos",
-        "Experiência": "Experiência",
-        "Formação Acadêmica": "Formação Acadêmica",
-        "Cursos": "Cursos",
         "Início": "Início",
-        tagline: "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+        "Perfil": "Perfil Pessoal",
+        "Experiência": "Experiência",
+        "Formação": "Formação Acadêmica",
+        "Cursos": "Cursos",
+        "Contato": "Contatos",
+        "Nome": "Guilherme Alves",
+        "tagline": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
         "perfil-texto": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
-        "experiencia-texto": "Atendimento ao público e suporte operacional."
+        "experiencia-texto": "Atendimento ao público e suporte operacional.",
+        "curriculo": "Ver Currículo",
+        "curso-sql": "SQL Intermediário — SoloLearn",
+        "curso-python": "Python Intermediário — SoloLearn",
+        "curso-html": "HTML: Introdução ao desenvolvimento de páginas web — IFRS",
+        "data-sql": "Nov 2025",
+        "data-python": "Nov 2025",
+        "data-html": "Set 2023"
       },
       en: {
-        "Perfil Pessoal": "Personal Profile",
-        "Contatos": "Contacts",
-        "Experiência": "Experience",
-        "Formação Acadêmica": "Academic Background",
-        "Cursos": "Courses",
         "Início": "Home",
-        tagline: "Information Systems student focused on web development, aiming to create modern and functional digital experiences while evolving in the technology world.",
-        "perfil-texto": "Information Systems student focused on web development, aiming to create modern and functional digital experiences while evolving in the technology world.",
-        "experiencia-texto": "Customer service and operational support."
+        "Perfil": "Profile",
+        "Experiência": "Experience",
+        "Formação": "Education",
+        "Cursos": "Courses",
+        "Contato": "Contact",
+        "Nome": "Guilherme Alves",
+        "tagline": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
+        "perfil-texto": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
+        "experiencia-texto": "Customer service and operational support.",
+        "curriculo": "View Resume",
+        "curso-sql": "Intermediate SQL — SoloLearn",
+        "curso-python": "Intermediate Python — SoloLearn",
+        "curso-html": "HTML: Introduction to Web Development — IFRS",
+        "data-sql": "Nov 2025",
+        "data-python": "Nov 2025",
+        "data-html": "Sep 2023"
       }
     };
 
+    // Botões de idioma
     const langButtons = document.querySelectorAll('.lang-btn');
     langButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         langButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const lang = btn.id;
-        changeLanguage(lang);
+        changeLanguage(btn.id);
       });
     });
 
-    function changeLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
+    // Salvar idioma escolhido no localStorage
+function changeLanguage(lang) {
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if (translations[lang][key]) {
+      el.textContent = translations[lang][key];
     }
+  });
+  localStorage.setItem('lang', lang);
+}
+
+// Carregar idioma salvo ao abrir o site
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem('lang') || 'pt';
+  changeLanguage(savedLang);
+  document.getElementById(savedLang).classList.add('active');
+});
+
   </script>
 </body>
 </html>
