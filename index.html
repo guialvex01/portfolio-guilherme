@@ -177,7 +177,12 @@
         "Nome": "Guilherme Alves",
         "tagline": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
         "perfil-texto": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+        "cargo": "Balconista — Centerseg",
+        "periodo": "2022 — Atual",
         "experiencia-texto": "Atendimento ao público e suporte operacional.",
+        "curso": "Sistemas de Informação",
+        "formacao-periodo": "Fev 2024 — Em andamento",
+        "instituicao": "Centro Universitário Geraldo Di Biase (UGB)",
         "curriculo": "Ver Currículo",
         "curso-sql": "SQL Intermediário — SoloLearn",
         "curso-python": "Python Intermediário — SoloLearn",
@@ -196,7 +201,12 @@
         "Nome": "Guilherme Alves",
         "tagline": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
         "perfil-texto": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
+        "cargo": "Sales Assistant — Centerseg",
+        "periodo": "2022 — Present",
         "experiencia-texto": "Customer service and operational support.",
+        "curso": "Information Systems",
+        "formacao-periodo": "Feb 2024 — Ongoing",
+        "instituicao": "Geraldo Di Biase University Center (UGB)",
         "curriculo": "View Resume",
         "curso-sql": "Intermediate SQL — SoloLearn",
         "curso-python": "Intermediate Python — SoloLearn",
@@ -207,34 +217,31 @@
       }
     };
 
-    // Botões de idioma
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        langButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        changeLanguage(btn.id);
+    // Função de troca de idioma + salvar no localStorage
+    function changeLanguage(lang) {
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+      localStorage.setItem('lang', lang);
+    }
+
+    // Carregar idioma salvo ao abrir
+    document.addEventListener("DOMContentLoaded", () => {
+      const savedLang = localStorage.getItem('lang') || 'pt';
+      changeLanguage(savedLang);
+      document.getElementById(savedLang).classList.add('active');
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          changeLanguage(btn.id);
+        });
       });
     });
-
-    // Salvar idioma escolhido no localStorage
-function changeLanguage(lang) {
-  document.querySelectorAll('[data-key]').forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-  localStorage.setItem('lang', lang);
-}
-
-// Carregar idioma salvo ao abrir o site
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLang = localStorage.getItem('lang') || 'pt';
-  changeLanguage(savedLang);
-  document.getElementById(savedLang).classList.add('active');
-});
-
   </script>
 </body>
 </html>
