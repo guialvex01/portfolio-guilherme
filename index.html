@@ -219,14 +219,20 @@
 
     // Função de troca de idioma + salvar no localStorage
     function changeLanguage(lang) {
-      document.querySelectorAll('[data-key]').forEach(el => {
-        const key = el.getAttribute('data-key');
-        if (translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-      localStorage.setItem('lang', lang);
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    if (translations[lang][key]) {
+      // Se for um link (<a>), troca apenas o texto interno
+      if (el.tagName.toLowerCase() === 'a') {
+        el.innerHTML = el.innerHTML.replace(el.textContent, translations[lang][key]);
+      } else {
+        el.textContent = translations[lang][key];
+      }
     }
+  });
+  localStorage.setItem('lang', lang);
+}
+
 
     // Carregar idioma salvo ao abrir
     document.addEventListener("DOMContentLoaded", () => {
