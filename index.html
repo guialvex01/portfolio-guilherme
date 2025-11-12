@@ -159,95 +159,98 @@
     <p>© <span id="year"></span> Guilherme Alves</p>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, once: true });
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 800, once: true });
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Traduções
-    const translations = {
-      pt: {
-        "Início": "Início",
-        "Perfil": "Perfil Pessoal",
-        "Experiência": "Experiência",
-        "Formação": "Formação Acadêmica",
-        "Cursos": "Cursos",
-        "Contato": "Contatos",
-        "Nome": "Guilherme Alves",
-        "tagline": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
-        "perfil-texto": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
-        "cargo": "Balconista — Centerseg",
-        "periodo": "2022 — Atual",
-        "experiencia-texto": "Atendimento ao público e suporte operacional.",
-        "curso": "Sistemas de Informação",
-        "formacao-periodo": "Fev 2024 — Em andamento",
-        "instituicao": "Centro Universitário Geraldo Di Biase (UGB)",
-        "curriculo": "Ver Currículo",
-        "curso-sql": "SQL Intermediário — SoloLearn",
-        "curso-python": "Python Intermediário — SoloLearn",
-        "curso-html": "HTML: Introdução ao desenvolvimento de páginas web — IFRS",
-        "data-sql": "Nov 2025",
-        "data-python": "Nov 2025",
-        "data-html": "Set 2023"
-      },
-      en: {
-        "Início": "Home",
-        "Perfil": "Profile",
-        "Experiência": "Experience",
-        "Formação": "Education",
-        "Cursos": "Courses",
-        "Contato": "Contact",
-        "Nome": "Guilherme Alves",
-        "tagline": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
-        "perfil-texto": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
-        "cargo": "Sales Assistant — Centerseg",
-        "periodo": "2022 — Present",
-        "experiencia-texto": "Customer service and operational support.",
-        "curso": "Information Systems",
-        "formacao-periodo": "Feb 2024 — Ongoing",
-        "instituicao": "Geraldo Di Biase University Center (UGB)",
-        "curriculo": "View Resume",
-        "curso-sql": "Intermediate SQL — SoloLearn",
-        "curso-python": "Intermediate Python — SoloLearn",
-        "curso-html": "HTML: Introduction to Web Development — IFRS",
-        "data-sql": "Nov 2025",
-        "data-python": "Nov 2025",
-        "data-html": "Sep 2023"
-      }
-    };
-
-    // Função de troca de idioma + salvar no localStorage
-    function changeLanguage(lang) {
-  document.querySelectorAll('[data-key]').forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-      // Se for um link (<a>), troca apenas o texto interno
-      if (el.tagName.toLowerCase() === 'a') {
-        el.innerHTML = el.innerHTML.replace(el.textContent, translations[lang][key]);
-      } else {
-        el.textContent = translations[lang][key];
-      }
+  // Traduções
+  const translations = {
+    pt: {
+      "Início": "Início",
+      "Perfil": "Perfil Pessoal",
+      "Experiência": "Experiência",
+      "Formação": "Formação Acadêmica",
+      "Cursos": "Cursos",
+      "Contato": "Contatos",
+      "Nome": "Guilherme Alves",
+      "tagline": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+      "perfil-texto": "Estudante de Sistemas de Informação com foco em desenvolvimento web, buscando criar experiências digitais modernas e funcionais enquanto evoluo no mundo da tecnologia.",
+      "cargo": "Balconista — Centerseg",
+      "periodo": "2022 — Atual",
+      "experiencia-texto": "Atendimento ao público e suporte operacional.",
+      "curso": "Sistemas de Informação",
+      "formacao-periodo": "Fev 2024 — Em andamento",
+      "instituicao": "Centro Universitário Geraldo Di Biase (UGB)",
+      "curriculo": "Ver Currículo",
+      "curso-sql": "SQL Intermediário — SoloLearn",
+      "curso-python": "Python Intermediário — SoloLearn",
+      "curso-html": "HTML: Introdução ao desenvolvimento de páginas web — IFRS",
+      "data-sql": "Nov 2025",
+      "data-python": "Nov 2025",
+      "data-html": "Set 2023"
+    },
+    en: {
+      "Início": "Home",
+      "Perfil": "Profile",
+      "Experiência": "Experience",
+      "Formação": "Education",
+      "Cursos": "Courses",
+      "Contato": "Contact",
+      "Nome": "Guilherme Alves",
+      "tagline": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
+      "perfil-texto": "Information Systems student focused on web development, creating modern and functional digital experiences while evolving in the world of technology.",
+      "cargo": "Sales Assistant — Centerseg",
+      "periodo": "2022 — Present",
+      "experiencia-texto": "Customer service and operational support.",
+      "curso": "Information Systems",
+      "formacao-periodo": "Feb 2024 — Ongoing",
+      "instituicao": "Geraldo Di Biase University Center (UGB)",
+      "curriculo": "View Resume",
+      "curso-sql": "Intermediate SQL — SoloLearn",
+      "curso-python": "Intermediate Python — SoloLearn",
+      "curso-html": "HTML: Introduction to Web Development — IFRS",
+      "data-sql": "Nov 2025",
+      "data-python": "Nov 2025",
+      "data-html": "Sep 2023"
     }
-  });
-  localStorage.setItem('lang', lang);
-}
+  };
 
+  // 🔧 Função de tradução (corrigida para manter os links)
+  function changeLanguage(lang) {
+    document.querySelectorAll('[data-key]').forEach(el => {
+      const key = el.getAttribute('data-key');
+      const translation = translations[lang][key];
 
-    // Carregar idioma salvo ao abrir
-    document.addEventListener("DOMContentLoaded", () => {
-      const savedLang = localStorage.getItem('lang') || 'pt';
-      changeLanguage(savedLang);
-      document.getElementById(savedLang).classList.add('active');
+      if (translation) {
+        // Se o elemento contém um link <a>, altera apenas o texto do link
+        if (el.querySelector('a')) {
+          el.querySelector('a').textContent = translation;
+        }
+        // Caso contrário, altera o texto normalmente
+        else {
+          el.textContent = translation;
+        }
+      }
+    });
+    localStorage.setItem('lang', lang);
+  }
 
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          changeLanguage(btn.id);
-        });
+  // Carregar idioma salvo e aplicar ao abrir
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem('lang') || 'pt';
+    changeLanguage(savedLang);
+    document.getElementById(savedLang).classList.add('active');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        changeLanguage(btn.id);
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
